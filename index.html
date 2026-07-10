@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Partidos de la Semana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- VIDEO DE FONDO -->
+
+    <video autoplay muted loop playsinline id="bgVideo">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <!-- MÚSICA -->
+
+    <audio id="music" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- PANEL SUPERIOR -->
+
+    <header class="topbar">
+
+        <div class="country-box">
+
+            <label for="country">
+                🌎 País
+            </label>
+
+            <select id="country">
+
+
+            </select>
+
+        
+
+        </div>
+
+        <div class="music-box">
+
+            <button id="playBtn">
+                ▶
+            </button>
+
+            <button id="pauseBtn">
+                ⏸
+            </button>
+
+            <input
+                type="range"
+                id="volumeControl"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.5">
+
+        </div>
+
+    </header>
+
+    <!-- TÍTULO -->
+
+    <section class="hero">
+
+        <h1>
+            PARTIDOS DE LA SEMANA
+        </h1>
+
+        <p id="timezoneInfo">
+            Horarios adaptados automáticamente
+        </p>
+
+    </section>
+
+    <!-- CONTENEDOR -->
+
+    <main class="container">
+
+        <!-- PARTIDO 1 -->
+
+        <section class="match-card">
+
+            <div class="match-day">
+                VIERNES 10 DE JULIO
+            </div>
+
+            <div class="match-time" id="time1">
+                21:00
+            </div>
+
+            <div class="teams">
+
+                <div class="team">
+
+                    <img src="Bayern.png">
+
+                    <h2>
+                        Bayern Múnich
+                    </h2>
+
+                </div>
+
+                <div class="vs">
+                    VS
+                </div>
+
+                <div class="team">
+
+                    <img src="Barcelona.png">
+
+                    <h2>
+                        Barcelona FC
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <div class="countdown" id="countdown1"></div>
+
+        </section>
+
+        <!-- PARTIDO 2 -->
+
+        <section class="match-card">
+
+            <div class="match-day">
+                SÁBADO 11 DE JULIO
+            </div>
+
+            <div class="match-time" id="time2">
+                21:00
+            </div>
+
+            <div class="teams">
+
+                <div class="team">
+
+                    <img src="psg.png">
+
+                    <h2>
+                        
+                        París Saint-Germain
+                    </h2>
+
+                </div>
+
+                <div class="vs">
+                    VS
+                </div>
+
+                <div class="team">
+
+                    <img src="City.png">
+
+                    <h2>
+                        Manchester City
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <div class="countdown" id="countdown2"></div>
+
+        </section>
+
+        <!-- PARTIDO 3 -->
+
+        <section class="match-card">
+
+            <div class="match-day">
+                DOMINGO 12 DE JULIO
+            </div>
+
+            <div class="match-time" id="time3">
+                21:00
+            </div>
+
+            <div class="teams">
+
+                <div class="team">
+
+                    <img src="napoli.png">
+
+                    <h2>
+                        SSC Napoli
+                    </h2>
+
+                </div>
+
+                <div class="vs">
+                    VS
+                </div>
+
+                <div class="team">
+
+                    <img src="Juventus.png">
+
+                    <h2>
+                        Juventus
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <div class="countdown" id="countdown3"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            ⚽ Hecho por Olivia Aiku
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
