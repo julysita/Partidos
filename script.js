@@ -25,9 +25,14 @@ document.body.addEventListener("click", () => {
 const country = document.getElementById("country");
 const timezoneInfo = document.getElementById("timezoneInfo");
 
-const time1 = document.getElementById("time1");
-const time2 = document.getElementById("time2");
-const time3 = document.getElementById("time3");
+const times = [
+    document.getElementById("time1"),
+    document.getElementById("time2"),
+    document.getElementById("time3"),
+    document.getElementById("time4"),
+    document.getElementById("time5"),
+    document.getElementById("time6")
+];
 
 /*==============================
 ZONAS (CON CUBA)
@@ -77,6 +82,7 @@ ACTUALIZAR HORARIOS
 ==============================*/
 
 function actualizarHoras() {
+
     const zona = zones[country.value].zone;
 
     const hora = baseDate.toLocaleTimeString("es-AR", {
@@ -85,9 +91,9 @@ function actualizarHoras() {
         timeZone: zona
     });
 
-    time1.innerHTML = hora;
-    time2.innerHTML = hora;
-    time3.innerHTML = hora;
+    times.forEach(t => {
+        if (t) t.innerHTML = hora;
+    });
 
     timezoneInfo.innerHTML =
         `Horario mostrado para: <b>${zones[country.value].name}</b>`;
