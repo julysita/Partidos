@@ -57,7 +57,8 @@ const zones = {
   PA: { zone: "America/Panama", name: "Panamá" },
   DO: { zone: "America/Santo_Domingo", name: "Rep. Dominicana" },
   CU: { zone: "America/Havana", name: "Cuba" },
-  ES: { zone: "Europe/Madrid", name: "España" }
+  ES: { zone: "Europe/Madrid", name: "España" },
+  NV: { zone: "America/Los_Angeles", name: "Nevada (EE. UU.)" },
 };
 
 /*==============================
